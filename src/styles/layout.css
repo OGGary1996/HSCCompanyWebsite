@@ -1,0 +1,45 @@
+
+/* This css file controls the global layout used in the project */
+/* Header, footer, main, etc. */
+@import './variables.css';
+
+/* Header 整体布局 - flex */
+.header {
+  position: fixed; /* 固定到顶部 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* 确保在最上层 */
+  background-color: rgba(0,0,0,0.6); /* 半透明背景 */
+  backdrop-filter: blur(6px); /* 背景模糊效果 */
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* 平滑过渡效果 */
+
+  display: flex;
+  justify-content: center;
+  gap:12px;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+/* Mian area*/
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 55px 0 40px 0; /* 顶部留出空间给固定的 header */
+  background-color: var(--color-background);
+}
+
+/* Footer 整体布局 - flex */
+.footer {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  padding: 40px 40px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+

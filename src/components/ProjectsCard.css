@@ -1,0 +1,36 @@
+.projects-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  width: 700px;
+  height: 450px;
+  background: #222222;
+}
+.projects-card:hover {
+  box-shadow: 0 0 10px , 0 0 30px ;
+  transform: scale(1.005);
+  text-shadow: none;
+}
+.projects-image {
+  width: 100%;
+  height: 75%;
+  object-fit:fill;
+}
+
+.projects-content {
+  padding: 15px;
+  text-align: center;
+}
+.projects-content h2{
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.projects-excerpt {
+  color: #777;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  text-align: left;
+}

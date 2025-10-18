@@ -1,0 +1,56 @@
+
+/* This css file contains global CSS variables for consistent styling across the application */
+@import './variables.css';
+
+/* Global Styles */
+/* 1. Basic*/
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+/* 2. Default Container width*/
+.container {
+  max-width: var(--max-width);
+  margin: 0;
+  padding: 0 20px;
+}
+/* 3. Title style*/
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+/* 4. Paragraph style*/
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* 5. Url style*/
+a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease; /*动画速度*/
+  position: relative;
+}
+a:hover {
+  color: var(--color-text);
+  text-shadow: 0 0 8px var(--color-text), 0 0 16px var(--color-text);
+  transform: scale(1.1);
+}
+/* 6. image style*/
+img {
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+

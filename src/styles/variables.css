@@ -1,0 +1,22 @@
+
+/* This css file controls the global variables used in the project
+ Colors, fonts, sizes, etc.
+*/
+
+:root {
+  /* Colors */
+  /* 1. Background color - black*/
+  --color-background: #000000;
+  /* 2. Font color - white */
+  --color-text: #ffffff;
+  /* 3. Accent color */
+  --color-accent: #6a40d8;
+
+  /* Fonts */
+  --font-main: "Inter", "Helvetica Neue", Arial, sans-serif;
+
+  /* Layout */
+  --max-width: 1200px;
+
+
+}

@@ -1,0 +1,46 @@
+@import "../styles/variables.css";
+
+/* Footer 整体布局参见layout.css */
+
+/* 1. content */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  border-bottom: 1px solid var(--color-text);
+}
+
+/* 2. each section */
+.footer-section {
+  text-align: center;
+  padding: 20px;
+}
+/* footer-section title*/
+.footer-section h3 {
+  color: var(--color-text);
+  font-size: 0.8rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* footer-section ul */
+.footer-section ul {
+  list-style: none;
+  padding: 8px;
+  margin: 6px;
+  font-size: 0.7rem;
+  color: var(--color-text);
+}
+/* footer-section li*/
+.footer-section li {
+  margin: 6px 0;
+}
+
+/* 3. bottom*/
+.footer-bottom {
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--color-text);
+}
+
+

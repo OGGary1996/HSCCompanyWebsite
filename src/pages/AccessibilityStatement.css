@@ -1,0 +1,43 @@
+
+.accessibility {
+  max-width: 850px;              /* 限制内容宽度 */
+  margin: 20px auto;
+  padding: 40px 40px;            /* 内边距，左右留白 */
+  width: 80%;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.8;
+}
+
+/*header*/
+.accessibility-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.accessibility-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+.accessibility-header p {
+  font-size: 0.95em;
+  text-align: justify;
+  margin-top: 10px;
+}
+
+/*content*/
+.accessibility-content section{
+  margin-bottom: 40px;
+}
+.accessibility-content h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+.accessibility-content p {
+  margin-bottom: 10px;
+}
+.accessibility-content ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+.accessibility-content li {
+  margin-bottom: 6px;
+}

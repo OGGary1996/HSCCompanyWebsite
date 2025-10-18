@@ -1,0 +1,344 @@
+/* 1. Hero */
+.hero-section {
+  position: relative;
+  height: 85vh;
+  background-size: 120% auto;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 5vw;
+  transition: background-size 0.5s ease; /* smooth in and out */
+  will-change: background-size;
+}
+.hero-section:hover {
+  background-size: 130% auto; /* 鼠标悬停时放大背景图 */
+  transition: background-size 0.5s ease; /* 平滑过渡效果 */
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+.hero-content h1 {
+  font-size: clamp(28px, 6vw, 60px);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 0 16px;
+  line-height: 1.1;
+}
+.hero-content p {
+  font-style: italic;
+  font-size: clamp(16px, 2vw, 18px);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  margin: 16px 0 0;
+}
+
+/* 2. Info */
+.intro-section {
+  padding: 60px 40px;
+  position: relative;
+}
+
+.intro-section h2 {
+  font-size: clamp(28px, 6vw, 60px);
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 20px;
+}
+.intro-section p {
+  font-size: clamp(16px, 1vw, 18px);
+  font-weight: 300;
+  margin: 0 auto;
+  letter-spacing: 0.5px;
+  max-width: 850px;
+  line-height: 2.2;
+  position: relative;
+  padding: 20px 10px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.intro-section p::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, 
+    transparent 0%,
+    var(--color-text) 50%,
+    transparent 100%
+  );
+  transform: scaleY(0);
+  transition: transform 0.2s ease;
+}
+.intro-section p:hover {
+  color: var(--color-text);
+  padding-left: 30px;
+}
+.intro-section p:hover::before {
+  transform: scaleY(1);
+}
+
+/* 3. Founder 部分*/
+.founder-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+}
+.founder-photo {
+  margin-top: 20px;
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 0 25px rgba(249, 115, 22, 0.3);
+  transition: transform 0.5s ease;
+}
+.founder-photo:hover {
+  transform: scale(1.05);
+}
+.founder-name {
+  font-size: clamp(16px, 1vw, 18px);
+  font-weight: 300;
+  margin: 0 auto;
+  letter-spacing: 0.5px;
+}
+.founder-text h2 {
+  font-size: clamp(28px, 6vw, 60px);
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 20px;
+}
+.founder-text p {
+  font-size: clamp(16px, 1vw, 18px);
+  font-weight: 300;
+  margin: 0 auto;
+  letter-spacing: 0.5px;
+  max-width: 1000px;
+  line-height: 2.2;
+  position: relative;
+  padding: 20px 10px;
+}
+.founder-text blockquote {
+  border-left: 4px solid;
+  padding-left: 15px;
+  margin-left: 50px;
+  margin-top: 0;
+  color: #aaa;
+  font-style: italic;
+  max-width: 800px;
+}
+
+/* ================= VISION & MISSION ================= */
+.vm-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 0 20px;
+}
+.vm-header h2{
+  font-size: clamp(28px, 6vw, 60px);
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 40px;
+}
+.vm-content {
+  display:flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 40px;
+  width: 100%;
+}
+.left {
+  flex: 0 0 60%;                   /* 左侧占60% */
+  display: flex;
+  align-items: center;
+}
+.vm-img {
+  width: 100%;                     /* 填满left容器 */
+  height: 500px;
+  object-fit: cover;               /* 图片覆盖容器 */
+  border-radius: 12px;
+}
+.right {
+  flex: 1;                         /* 右侧占剩余空间（40%） */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+}
+.vision-card {
+  padding: 0px;
+  transition: all 0.4s ease;
+}
+.vision-card h3 {
+  font-size: clamp(24px, 1vw, 20px);
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.vision-card p {
+  font-size: clamp(16px, 1vw, 18px);
+  font-weight: 300;
+  margin: 0 auto;
+  letter-spacing: 0.5px;
+}
+
+.vision-divider {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+  overflow: hidden;
+  background: transparent;
+}
+/* 斜线 */
+.vision-divider::before {
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: -10%;
+  width: 120%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0) 10%,
+    rgba(255, 255, 255, 0.9) 50%,  /* 🔑 中间最亮 */
+    rgba(255, 255, 255, 0) 90%,
+    transparent 100%
+  );
+  transform: rotate(-6deg);
+}
+
+/* ================= CORE VALUES ================= */
+.core-values-section {
+  padding: 60px 80px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* 标题 */
+.hsc-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.hsc-header h2 {
+  font-size: clamp(28px, 6vw, 60px);
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 30px;
+}
+.hsc-header p {
+  font-size: clamp(16px, 1vw, 18px);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+.hsc-bubble {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  height: 500px;
+}
+/* 通用气泡样式 */
+.bubble {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* 🔑 白色气泡 */
+  background: var(--color-background);
+  backdrop-filter: blur(10px);
+  border: 2px solid;
+  
+  /* 基础阴影 */
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.1),
+    0 0 15px rgba(255, 255, 255, 0.1);
+  
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.bubble h3 {
+  font-size: clamp(24px, 1vw, 20px);
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+}
+.bubble p {
+  font-size: clamp(16px, 1vw, 18px);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+/* 三个气泡位置（随机错落） */
+.agility {
+  top: 1%;
+  left: 120px;
+  animation: float1 7s ease-in-out infinite alternate;
+}
+
+.precision {
+  top: 50%;
+  left: -120px;
+  animation: float2 8s ease-in-out infinite alternate;
+}
+
+.resilience {
+  top: 15%;
+  right: 160px;
+  animation: float3 9s ease-in-out infinite alternate;
+}
+
+/* 气泡发光 hover 效果 */
+.bubble:hover {
+  transform: scale(1.05) translateY(-6px);
+  
+
+  box-shadow: 
+    0 0 20px rgba(255, 255, 255, 0.6),
+    0 0 40px rgba(255, 255, 255, 0.4),
+    0 0 60px rgba(255, 255, 255, 0.2),
+    0 8px 30px rgba(0, 0, 0, 0.15);
+  
+  border-color: rgba(255, 255, 255, 0.8);
+}
+

@@ -1,0 +1,119 @@
+/* snapshots header 部分*/
+.snapshots__header {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 0 40px;  /* 给标题部分添加内边距 */
+}
+.snapshots__title {
+  font-size: clamp(28px, 6vw, 60px);
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+.snapshots__subtitle {
+  font-size: clamp(16px, 2vw, 18px);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+/* 横向滚动容器 */
+.charts__scroll {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 40px;
+
+  /* Firefox - 默认隐藏滚动条 */
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+
+  /* 平滑滚动 */
+  scroll-behavior: smooth;
+
+  /* 过渡效果 */
+  transition: scrollbar-color 0.3s ease;
+}
+
+/* 鼠标悬停或滚动时显示滚动条 - Firefox */
+.charts__scroll:hover,
+.charts__scroll:focus {
+  scrollbar-color: #666 #222;
+}
+
+/* Webkit浏览器（Chrome、Safari、Edge）滚动条样式 */
+.charts__scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.charts__scroll::-webkit-scrollbar-track {
+  background: transparent;        /* 🔑 默认透明 */
+  border-radius: 4px;
+}
+
+.charts__scroll::-webkit-scrollbar-thumb {
+  background: transparent;        /* 🔑 默认透明 */
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+/* 鼠标悬停时显示滚动条 - Webkit */
+.charts__scroll:hover::-webkit-scrollbar-track {
+  background: #222;
+}
+
+.charts__scroll:hover::-webkit-scrollbar-thumb {
+  background: #666;
+}
+
+.charts__scroll::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+/* charts */
+.charts__group {
+  display: flex;
+  flex-wrap: nowrap;              /* 不换行，强制横向排列 */
+  gap: 50px;                      /* 减少间距 */
+  width: max-content;             /* 让容器宽度由内容决定 */
+  padding: 0;                     /* 移除内边距 */
+}
+/* 每张卡片固定宽度，避免被压缩 */
+.chart__card{
+  flex: 0 0 400px;
+  height: 420px;                  /* 固定高度 */
+  background: #111;
+  border: 1px solid #1f1f1f;
+  border-radius: 12px;
+  padding: 18px;                  /* 减少内边距 */
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  /* 内容两端对齐，中间均匀分布 */
+  align-items: center;             /* 水平居中对齐 */
+  margin-bottom: 30px;
+}
+/* 第1个卡片 - Pie图表，保持正方形 */
+.chart__card:nth-child(1) {
+  flex: 0 0 400px;               /* 宽度380px */
+  height: 420px;                 /* 高度420px，接近正方形 */
+}
+/* 第2、3个卡片 - Line图表，长方形 */
+.chart__card:nth-child(2),
+.chart__card:nth-child(3) {
+  flex: 0 0 620px;
+  height: 420px;
+}
+/* 所有canvas的基础样式 */
+.chart__card:nth-child(2) canvas,
+.chart__card:nth-child(3) canvas {
+  margin-top: 20px;
+  width: 100% !important;
+  max-height: 90% !important;    /* 占据卡片高度的90% */
+}
+.chart__title {
+  font-size: 16px;                /* 稍微减小字体 */
+  margin: 0 0 0 0;
+  color: #e5e7eb;
+  line-height: 1.3;
+  flex-shrink: 0;                 /* 防止标题被压缩 */
+}

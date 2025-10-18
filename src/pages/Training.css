@@ -1,0 +1,329 @@
+.training-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin: 0 auto;
+}
+.training-header h1 {
+  font-size: clamp(28px, 6vw, 60px);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  margin-top: 50px;
+}
+.training-header h3 {
+  font-size: clamp(24px, 1vw, 20px);
+  font-weight: 400;
+}
+.training-header p {
+  font-size: clamp(16px, 1vw, 18px);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.content-1 {
+  display: grid;
+  grid-template-columns: 0.8fr 0.05fr 1.2fr; /* 左文、中线、右卡 */
+  gap: 40px;
+  align-items: start;
+  padding: 50px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.content-1-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.content-1-left h2 {
+  font-size: clamp(20px, 6vw, 40px);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+.content-1-left h3 {
+  font-size: clamp(24px, 1vw, 20px);
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.content-1-left p {
+  font-size: clamp(16px, 1vw, 18px);
+  font-weight: 300;
+  margin: 0 auto;
+  letter-spacing: 0.5px;
+}
+
+.content-1-divider {
+  position: relative;
+  width: 100%;                /* 容器宽度（grid列宽） */
+  height: 100%;               /* 容器高度（撑满整个内容高度） */
+  min-height: 400px;          /* 最小高度 */
+  overflow: visible;
+}
+
+/* 主斜线 - 竖向倾斜 */
+.content-1-divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(-5deg);  /* 竖向旋转 */
+  width: 2px;                 /* 线的宽度 */
+  height: 100%;               /* 线的高度（超出容器以覆盖） */
+  background: linear-gradient(
+    180deg,                   /* 垂直方向渐变 */
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 10%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(255, 255, 255, 0.3) 90%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  /* 白色微光 */
+  box-shadow: 
+    0 0 8px rgba(255, 255, 255, 0.5),
+    0 0 16px rgba(255, 255, 255, 0.3),
+    0 0 24px rgba(255, 255, 255, 0.1);
+}
+.content-1-right {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-top: 20px;
+}
+.content-1-card1,
+.content-1-card2,
+.content-1-card3 {
+  position: relative;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.content-1-card1 h3,
+.content-1-card2 h3,
+.content-1-card3 h3 {
+  font-size: clamp(24px, 1vw, 20px);
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.content-1-card1 p,
+.content-1-card2 p,
+.content-1-card3 p {
+  font-size: clamp(16px, 1vw, 18px);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+.content-1-card1 {
+  margin-left: 0;
+}
+.content-1-card2 {
+  margin-left: 30px;
+}
+.content-1-card3 {
+  margin-left: 60px;
+}
+.content-1-card1:hover,
+.content-1-card2:hover,
+.content-1-card3:hover {
+  transform: translateY(-6px);
+}
+
+.content-2 {
+  display: grid;
+  grid-template-columns: 1.1fr 0.05fr 0.9fr; /* 左文、中线、右卡 */
+  gap: 50px;
+  align-items: start;
+  padding: 0 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.content-2-right {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.content-2-right h2 {
+  font-size: clamp(20px, 6vw, 40px);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+.content-2-right h3 {
+  font-size: clamp(24px, 1vw, 20px);
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.content-2-right p {
+  font-size: clamp(16px, 1vw, 18px);
+  font-weight: 300;
+  margin: 0 auto;
+  letter-spacing: 0.5px;
+}
+
+.content-2-divider {
+  position: relative;
+  width: 100%;                /* 🔑 容器宽度（grid列宽） */
+  height: 100%;               /* 🔑 容器高度（撑满整个内容高度） */
+  min-height: 400px;          /* 最小高度 */
+  overflow: visible;
+}
+
+/* 主斜线 - 竖向倾斜 */
+.content-2-divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  transform: translateX(50%) rotate(5deg);  /* 🔑 竖向旋转 */
+  width: 2px;                 /* 🔑 线的宽度 */
+  height: 100%;               /* 🔑 线的高度（超出容器以覆盖） */
+  background: linear-gradient(
+      180deg,                   /* 🔑 垂直方向渐变 */
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.3) 10%,
+      rgba(255, 255, 255, 0.9) 50%,
+      rgba(255, 255, 255, 0.3) 90%,
+      rgba(255, 255, 255, 0) 100%
+  );
+  /* 白色微光 */
+  box-shadow:
+      0 0 8px rgba(255, 255, 255, 0.5),
+      0 0 16px rgba(255, 255, 255, 0.3),
+      0 0 24px rgba(255, 255, 255, 0.1);
+}
+.content-2-left {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-top: 20px;
+  text-align: right;
+}
+.content-2-card1,
+.content-2-card2,
+.content-2-card3 {
+  position: relative;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.content-2-card1 h3,
+.content-2-card2 h3,
+.content-2-card3 h3 {
+  font-size: clamp(24px, 1vw, 20px);
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.content-2-card1 p,
+.content-2-card2 p,
+.content-2-card3 p {
+  font-size: clamp(16px, 1vw, 18px);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+.content-2-card1 {
+  margin-right: 10px;
+}
+.content-2-card2 {
+  margin-right: 40px;
+}
+.content-2-card3 {
+  margin-right: 70px;
+}
+.content-2-card1:hover,
+.content-2-card2:hover,
+.content-2-card3:hover {
+  transform: translateY(-6px);
+}
+
+/* ================= WHY PARTNER ================= */
+.why-partner-section {
+  display: grid;
+  grid-template-columns: 1fr 0.05fr 1fr; /* 左文、中线、右卡 */
+  gap: 40px;
+  align-items: start;
+  padding: 70px 40px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+.why-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.why-left h2 {
+  font-size: clamp(28px, 6vw, 60px);
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  position: relative;
+}
+.why-left p{
+  font-size: clamp(16px, 1vw, 18px);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+.why-left blockquote {
+  border-left: 4px solid;
+  padding-left: 15px;
+  margin-left: 10px;
+  margin-top: 0;
+  color: #aaa;
+  font-style: italic;
+  max-width: 800px;
+}
+.why-divider {
+  position: relative;
+  width: 3px;
+  height: 100%;
+  border-radius: 6px;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.9) 50%,
+      rgba(255, 255, 255, 0) 100%
+  );
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+.why-right {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-top: 60px;
+}
+.wp-card {
+  position: relative;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.wp-card h3 {
+  font-size: clamp(24px, 1vw, 20px);
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.wp-card p {
+  font-size: clamp(16px, 1vw, 18px);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+/* 数字水印 */
+.wp-num {
+  position: absolute;
+  top: -20px;
+  left: 350px;
+  font-size: 5rem;
+  font-weight: 700;
+  opacity: 0.15;
+}
+/* hover 动效 */
+.wp-card:hover {
+  transform: translateY(-6px);
+}

@@ -1,0 +1,44 @@
+@import "../styles/variables.css";
+
+/* Header 整体布局参见layout.css */
+
+/* header-left部分 - flex */
+.header-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-right: 1px solid var(--color-text);
+  padding-right: 20px;
+  margin-right: 12px;
+}
+/*header-left-logo size*/
+.logo {
+  width: 60px;
+  height: 60px;
+}
+/* header-left-company-name 文字属性 */
+.company-name h1{
+  font-size: 2rem;
+  margin: 0;
+  color: var(--color-text);
+  letter-spacing: 1px;
+}
+.company-name p {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--color-text);
+  letter-spacing: 0.2px;
+}
+
+/*header-nav布局*/
+.header-nav {
+  display: flex;
+  gap: 40px;
+}
+/*header-nav-a 当前激活页面保持高亮*/
+.header-nav a.active {
+  color: var(--color-text);
+  text-shadow: 0 0 8px var(--color-text), 0 0 16px var(--color-text);
+  transform: scale(1.1);
+}

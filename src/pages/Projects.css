@@ -1,0 +1,52 @@
+.projects-container {
+  display: grid;
+  grid-template-columns: 0.5fr 0.05fr 1.5fr; /* 左文、中线、右卡 */
+  gap: 40px;
+  align-items: start;
+  padding: 50px 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.projects-left {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: left;
+}
+.projects-title {
+  font-size: clamp(28px, 6vw, 60px);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: left;
+  text-transform: uppercase;
+  position: relative;
+}
+.projects-description {
+  font-size: clamp(16px, 1vw, 18px);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.projects-divider {
+  position: relative;
+  width: 3px;
+  height: 100%;
+  border-radius: 6px;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.9) 50%,
+      rgba(255, 255, 255, 0) 100%
+  );
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+.projects-right {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  text-align: left;
+}
