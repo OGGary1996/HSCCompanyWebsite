@@ -13,7 +13,7 @@ const BlogDetail = () => {
       <div className="blog-detail">
         <h1>Article not found</h1>
         <p>The article you're looking for doesn't exist.</p>
-        <Link to="/blog" className="back-link">← Back to Blog</Link>
+        <Link to="/home" className="back-link">← Back</Link>
       </div>
     );
   } 
@@ -28,7 +28,7 @@ const BlogDetail = () => {
       <div className="content">
         <ReactMarkdown>{article.content}</ReactMarkdown>
       </div>
-      <Link to="/blog" className="back-link">← Back to Blog</Link>
+      <Link to="/home" className="back-link">← Back</Link>
     </div>
   )
 }
