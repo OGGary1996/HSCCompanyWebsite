@@ -28,7 +28,7 @@ const BlogDetail = () => {
       <div className="content">
         <ReactMarkdown>{article.content}</ReactMarkdown>
       </div>
-      <Link to="/home" className="back-link">← Back</Link>
+      <Link to="/" className="back-link">← Back</Link>
     </div>
   )
 }
