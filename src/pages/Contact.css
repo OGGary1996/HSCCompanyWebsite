@@ -108,3 +108,103 @@
   flex: 1;
   min-width: 200px;
 }
+
+/* 移动端Contact页面响应式 */
+@media (max-width: 768px) {
+  /* Hero部分 - 参考AboutUs优化 */
+  .contact-hero {
+    height: 35vh;
+    min-height: 30vh;
+    padding: 10px 20px;
+    margin-top: 30px;
+    background-size: cover;
+    background-position: center center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-hero:hover {
+    background-size: cover;
+  }
+  
+  /* 移动端遮罩层优化 - 恰好覆盖图片大小 */
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+  }
+  
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .hero-content h1 {
+    font-size: clamp(22px, 6vw, 30px);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  
+  .hero-content p {
+    font-size: clamp(14px, 3.5vw, 16px);
+    line-height: 1.4;
+    margin: 8px 0;
+  }
+  
+  .hero-content button {
+    padding: 12px 18px;
+    font-size: 14px;
+    margin: 15px 0;
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 40px 20px;
+  }
+  
+  .contact-title {
+    font-size: clamp(24px, 6vw, 32px);
+    text-align: center;
+    margin: 10px 0 20px 0;
+  }
+  
+  .contact-divider {
+    width: 100%;
+    height: 3px;
+    border-radius: 6px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.9) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    margin: 0 0;
+  }
+  
+  .contact-info-list {
+    gap: 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .info-block {
+    min-width: auto;
+    padding: 15px;
+  }
+  
+  .info-block a {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+}

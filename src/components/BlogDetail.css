@@ -67,3 +67,59 @@
   text-align: center;
   padding: 100px 0;
 }
+
+/* 移动端BlogDetail响应式 */
+@media (max-width: 768px) {
+  .blog-detail {
+    padding: 100px 20px;
+  }
+  
+  .blog-detail .cover {
+    max-height: 250px;
+    margin-bottom: 20px;
+  }
+  
+  .blog-detail .title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .blog-detail .header {
+    margin: 20px 0;
+  }
+  
+  .blog-detail .header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+  
+  .blog-detail .meta {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  
+  .blog-detail .content h2 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  
+  .blog-detail .content p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 10px 0;
+  }
+  
+  .blog-detail .content ul {
+    padding-left: 15px;
+  }
+  
+  .blog-detail .back-link {
+    margin-top: 30px;
+    font-size: 14px;
+  }
+  
+  .not-found {
+    padding: 50px 20px;
+  }
+}

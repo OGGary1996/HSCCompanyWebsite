@@ -42,3 +42,89 @@
   text-shadow: 0 0 8px var(--color-text), 0 0 16px var(--color-text);
   transform: scale(1.1);
 }
+
+/* 移动端Header响应式 */
+@media (max-width: 768px) {
+  /* 第一行：Logo在左侧，公司名称居中 */
+  .header-left {
+    position: relative;
+    border-right: none;
+    padding: 8px 15px 12px 15px;
+    margin: 0 0 12px 0;
+    gap: 0;
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto auto 1fr;
+    align-items: center;
+    justify-items: center;
+    box-sizing: border-box;
+  }
+  
+  .logo {
+    width: 45px;
+    height: 45px;
+    grid-column: 2;
+    justify-self: end;
+    margin: 0 8px 0 0;
+  }
+  
+  .company-name {
+    grid-column: 3;
+    text-align: left;
+    margin: 0;
+  }
+  
+  .company-name h1 {
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+    margin: 0;
+  }
+  
+  .company-name p {
+    font-size: 0.75rem;
+    letter-spacing: 0.1px;
+    margin: 0;
+  }
+  
+  /* 第二行：横向分割线（白色） */
+  .header-left::after {
+    content: '';
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 0;
+    height: 1px;
+    background: var(--color-text);
+  }
+  
+  /* 第三行：导航链接，强制单行，居中显示 */
+  .header-nav {
+    gap: 8px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    
+    /* 隐藏滚动条但保持滚动功能 */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .header-nav::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .header-nav a {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+}

@@ -5,9 +5,17 @@ import { Mail, Phone, Globe, Linkedin, Youtube, Twitter } from "lucide-react";
 
 
 const Contact = () => {
+  // 创建一个 ref 引用联系表单部分
+  const contactSectionRef = React.useRef(null);
+
   // 点击 Get in Touch 按钮时，滚动到联系表单部分
   const handleScrollToContact = () => {
-    window.scrollTo({top:700, behavior: 'smooth'});
+    if (contactSectionRef.current) {
+      contactSectionRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
   }
 
   return (
@@ -16,14 +24,14 @@ const Contact = () => {
       <section className="contact-hero" style={{backgroundImage: `url(${contactBg})`}}>
         <div className="hero-overlay"></div>
         <div className="hero-content">
-          <h1>Let’s Talk About<br/> Smarter, Safer Energy</h1>
+          <h1>Let's Talk About<br/> Smarter, Safer Energy</h1>
           <p>Partner with HSC to deliver precision, agility, and resilience.</p>
           <button onClick={handleScrollToContact} >Get in Touch</button>
         </div>
       </section>
 
       {/* Info + Form Section */}
-      <section className="contact-section" >
+      <section className="contact-section" ref={contactSectionRef}>
         {/* Title */}
         <h1 className="contact-title">Contact Us</h1>
 

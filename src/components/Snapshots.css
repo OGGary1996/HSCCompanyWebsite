@@ -117,3 +117,80 @@
   line-height: 1.3;
   flex-shrink: 0;                 /* 防止标题被压缩 */
 }
+
+/* 移动端Snapshots响应式 */
+@media (max-width: 768px) {
+  .snapshots__header {
+    padding: 0 20px;
+    text-align: left;
+  }
+  
+  .snapshots__title {
+    font-size: clamp(24px, 6vw, 36px);
+  }
+  
+  .snapshots__subtitle {
+    font-size: clamp(14px, 4vw, 16px);
+  }
+  
+  /* 移动端滚动容器 - 显示滚动条 */
+  .charts__scroll {
+    padding: 0 20px;
+    overflow-x: scroll;
+    
+    /* 始终显示滚动条 */
+    scrollbar-width: thin;
+    scrollbar-color: #666 #222;
+  }
+  
+  /* Webkit浏览器滚动条 - 始终显示 */
+  .charts__scroll::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .charts__scroll::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 3px;
+  }
+  
+  .charts__scroll::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 3px;
+  }
+  
+  .charts__scroll::-webkit-scrollbar-thumb:hover {
+    background: #888;
+  }
+  
+  /* 卡片组 - 添加右侧padding */
+  .charts__group {
+    gap: 20px;
+    padding-right: 20px;
+  }
+  
+  .chart__card {
+    flex: 0 0 280px;
+    height: 350px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .chart__card:nth-child(1) {
+    flex: 0 0 280px;
+    height: 350px;
+  }
+  
+  .chart__card:nth-child(2),
+  .chart__card:nth-child(3) {
+    flex: 0 0 350px;
+    height: 350px;
+  }
+  
+  .chart__title {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+}

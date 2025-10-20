@@ -12,7 +12,7 @@ const AboutUs = () => {
         <div className="hero-overlay"></div>
         <div className="hero-content">
           <h1>Empowering Energy Leaders to Deliver Smarter, Safer Solutions.</h1>
-          <p>Energy is shifting. Pressure is rising. We help you deliver.</p>
+          <p>Energy is shifting. Pressure is rising.<br/> We help you deliver.</p>
         </div>
       </section>
 

@@ -342,3 +342,285 @@
   border-color: rgba(255, 255, 255, 0.8);
 }
 
+/* 移动端AboutUs页面响应式 */
+@media (max-width: 768px) {
+  /* Hero部分优化 - 参考Home页面 */
+  .hero-section {
+    height: 35vh;
+    min-height: 30vh;
+    padding: 10px 20px;
+    margin-top: 30px;
+    background-size: cover;
+    background-position: center center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* 移动端遮罩层优化 - 恰好覆盖图片大小 */
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+  }
+  
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .hero-content h1 {
+    font-size: clamp(22px, 6vw, 30px);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  
+  .hero-content p {
+    font-size: clamp(14px, 3.5vw, 16px);
+    line-height: 1.4;
+    margin: 8px 0;
+  }
+  
+  /* 公司介绍部分 */
+  .intro-section {
+    padding: 70px 20px;
+  }
+  
+  .intro-section h2 {
+    font-size: clamp(20px, 5vw, 28px);
+    margin-bottom: 15px;
+    text-align: center;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+  }
+  
+  .intro-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    padding: 0 10px;
+    text-align: left;
+    max-width: 100%;
+    
+    /* 移除hover效果，直接显示左侧装饰线 */
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  /* 左侧装饰线 - 始终显示 */
+  .intro-section p::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, 
+      transparent 0%,
+      var(--color-text) 50%,
+      transparent 100%
+    );
+    transform: scaleY(1);
+  }
+  
+  /* 移除hover效果 */
+  .intro-section p:hover {
+    padding-left: 20px;
+  }
+  
+  /* 创始人部分 */
+  .founder-section {
+    padding: 20px 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .founder-photo {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
+  
+  .founder-name {
+    font-size: 16px;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .founder-text {
+    width: 100%;
+    text-align: left;
+  }
+  
+  .founder-text h2 {
+    font-size: clamp(20px, 5vw, 28px);
+    text-align: center;
+  }
+  
+  .founder-text p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .founder-text blockquote {
+    font-size: 14px;
+    padding: 12px 15px;
+    margin: 15px 0 0 0;
+    line-height: 1.5;
+  }
+  
+  /* 愿景使命部分 */
+  .vm-section {
+    padding: 0 20px;
+    margin-top: 60px;
+  }
+  
+  .vm-header h2 {
+    font-size: clamp(24px, 6vw, 32px);
+    text-align: center;
+    padding-bottom: 15px;
+    margin-bottom: 0;
+  }
+  
+  .vm-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .left {
+    width: 100%;
+    order: 2;
+  }
+  
+  .right {
+    width: 100%;
+    order: 1;
+  }
+  
+  .vm-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin: 0 auto 15px;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  .vision-card {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .vision-card h3 {
+    font-size: clamp(18px, 4vw, 22px);
+    margin-bottom: 8px;
+  }
+  
+  .vision-card p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .vision-divider {
+    height: 20px;
+    margin: 15px 0;
+  }
+  
+  /* 核心价值部分 */
+  .core-values-section {
+    padding: 0 20px 40px;
+  }
+  
+  .hsc-header {
+    margin-bottom: 25px;
+  }
+  
+  .hsc-header h2 {
+    font-size: clamp(20px, 6vw, 28px);
+    letter-spacing: 2px;
+    padding-bottom: 15px;
+  }
+  
+  .hsc-header p {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+  
+  /* 气泡容器 - grid 布局，自动换行 */
+  .hsc-bubble {
+    height: auto;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    justify-items: center;
+    padding: 0 0;
+  }
+  
+  /* 气泡样式 - 竖向排列，始终显示发光效果 */
+  .bubble {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+    border-radius: 50%;
+    
+    /* 保持桌面端的样式 */
+    background: var(--color-background);
+    backdrop-filter: blur(10px);
+    border: 2px solid;
+    
+    /* 始终显示发光效果 */
+    box-shadow: 
+      0 0 20px rgba(255, 255, 255, 0.6),
+      0 0 40px rgba(255, 255, 255, 0.4),
+      0 0 60px rgba(255, 255, 255, 0.2),
+      0 8px 30px rgba(0, 0, 0, 0.15);
+    
+    border-color: rgba(255, 255, 255, 0.8);
+    
+    /* 移除动画和点击效果 */
+    animation: none !important;
+    cursor: default;
+    pointer-events: none;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .bubble h3 {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  
+  .bubble p {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.3;
+    letter-spacing: 0.3px;
+  }
+  
+  /* 所有气泡居中显示 */
+  .agility,
+  .precision,
+  .resilience {
+    position: static;
+    align-self: center;
+  }
+}
+

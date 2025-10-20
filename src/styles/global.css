@@ -12,6 +12,9 @@ html, body {
   font-family: var(--font-main);
   line-height: 1.6;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 /* 2. Default Container width*/
 .container {
