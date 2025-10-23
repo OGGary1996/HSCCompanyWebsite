@@ -8,23 +8,20 @@ import removeMd from "remove-markdown";
 const BlogCard = ({article}) => {
   const previewContent = removeMd(article.content).substring(0,150);
   return (
-    <div className="blog-card">
+    <Link className="blog-card" to={`/blog/${article.id}`}>
       <img src={article.image} alt={article.title} className="blog-image" />
       <div className="blog-content">
         <h2 className="blog-title">
           {article.title}
         </h2>
         <p className="blog-meta">
-          By {article.author} | {article.createdAt}
+          From {article.source}<br/>By {article.author}<br/>{article.createdAt}
         </p>
         <p className="blog-excerpt">
           {previewContent}...
         </p>
-        <Link to={`/blog/${article.id}`} className="read-more">
-          Read More →
-        </Link>
       </div>
-    </div>
+    </Link>
   )
 }
 

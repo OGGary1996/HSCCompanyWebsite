@@ -167,9 +167,10 @@
 }
 .insights__content {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;  /* 允许换行 */
+  justify-content: left;  /* 让卡片居中排列 */
   gap: 50px;
+  align-items: stretch;  /* 或者用 flex-start */
 }
 
 /* 移动端Home页面响应式 */

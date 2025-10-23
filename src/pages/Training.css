@@ -53,7 +53,7 @@
 .content-1-left p {
   font-size: clamp(16px, 1vw, 18px);
   font-weight: 300;
-  margin: 0 auto;
+  margin: -20px auto;
   letter-spacing: 0.5px;
 }
 
@@ -161,7 +161,7 @@
 .content-2-right p {
   font-size: clamp(16px, 1vw, 18px);
   font-weight: 300;
-  margin: 0 auto;
+  margin: -20px auto;
   letter-spacing: 0.5px;
 }
 
@@ -317,9 +317,9 @@
 /* 数字水印 */
 .wp-num {
   position: absolute;
-  top: -20px;
+  top: -25px;
   left: 350px;
-  font-size: 5rem;
+  font-size: 3.5rem;
   font-weight: 700;
   opacity: 0.15;
 }
@@ -559,7 +559,7 @@
     top: 0px;
     left: auto;
     right: 15px;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
     opacity: 0.15;
     line-height: 1;

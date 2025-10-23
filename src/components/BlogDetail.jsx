@@ -23,10 +23,16 @@ const BlogDetail = () => {
       <img src={article.image} alt={article.title} className="cover" />
       <h1 className="title">{article.title}</h1>
       <p className="meta">
-        By {article.author} | {article.createdAt}
+        From {article.source}<br/>By {article.author}<br/>{article.createdAt}
       </p>
       <div className="content">
+        <h2>Abstract</h2>
         <ReactMarkdown>{article.content}</ReactMarkdown>
+        <h2>Content</h2>
+        <p>
+          <a href={article.url} target="_blank">Detail: {article.url}</a>
+        </p>
+        <p className="citation">{article.cite}</p>
       </div>
       <Link to="/" className="back-link">← Back</Link>
     </div>

@@ -19,41 +19,26 @@
   text-align: left;
 }
 
-.blog-detail .header {
-  text-align: center;
-  margin: 40px 40px;
-}
-
-.blog-detail .header h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
 .blog-detail .meta {
   color: #666;
   font-size: 0.95rem;
+  text-align: left;
 }
 
 /* Markdown内容样式 */
 .blog-detail .content h2 {
   margin-top: 25px;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   color: var(--color-text);
 }
-
 .blog-detail .content p {
   margin: 12px 0;
 }
-
-.blog-detail .content ul {
-  padding-left: 20px;
-  margin: 10px 0;
+.blog-detail .content .citation {
+  margin-top: 25px;
+  color: #666;
+  font-size: 0.95rem;
 }
-
-.blog-detail .content li {
-  margin: 6px 0;
-}
-
 .blog-detail .back-link {
   display: inline-block;
   margin-top: 40px;
@@ -84,16 +69,7 @@
     margin-bottom: 15px;
     text-align: center;
   }
-  
-  .blog-detail .header {
-    margin: 20px 0;
-  }
-  
-  .blog-detail .header h1 {
-    font-size: 1.5rem;
-    margin-bottom: 8px;
-  }
-  
+
   .blog-detail .meta {
     font-size: 0.85rem;
     text-align: center;
@@ -103,22 +79,12 @@
     font-size: 1.2rem;
     margin-top: 20px;
   }
-  
+
   .blog-detail .content p {
     font-size: 14px;
     line-height: 1.6;
     margin: 10px 0;
   }
-  
-  .blog-detail .content ul {
-    padding-left: 15px;
-  }
-  
-  .blog-detail .back-link {
-    margin-top: 30px;
-    font-size: 14px;
-  }
-  
   .not-found {
     padding: 50px 20px;
   }

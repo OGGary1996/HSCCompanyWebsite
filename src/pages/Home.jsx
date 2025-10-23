@@ -18,7 +18,7 @@ function Home(){
             Empowering Energy Leaders to Deliver Smarter, Safer Solutions
           </p>
           <div className="hero__description">
-            <p>The energy landscape is shifting fast. With nearly three decades of global experience, <br/>Hummingbird Subsurface Consultants (HSC) is built to solve your most complex subsurface and asset integrity challenges.</p>
+            <p>The energy landscape is shifting fast. With nearly three decades of global experience.</p>
             <p>We provide more than consulting.</p>
           </div>
         </div>
