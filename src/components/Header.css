@@ -43,6 +43,31 @@
   transform: scale(1.1);
 }
 
+.theme-toggle {
+  position: absolute;
+  right: 150px;
+  background: transparent;  /* 透明背景 */
+  border: none;             /* 无边框 */
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  outline: none;  /* 去除点击时的默认边框 */
+}
+.theme-icon {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+  filter: invert(1);  /* 反转颜色：黑色变白色 */
+  transition: opacity 0.3s ease;  /* 图片切换时的淡入淡出效果 */
+}
+.theme-toggle:active .theme-icon {
+  transform: rotate(180deg);  /* 点击时旋转 */
+}
+
 /* 移动端Header响应式 */
 @media (max-width: 768px) {
   /* 第一行：Logo在左侧，公司名称居中 */
@@ -126,5 +151,13 @@
     padding: 4px 8px;
     white-space: nowrap;
     flex-shrink: 0;
+  }
+  /* 移动端主题切换按钮 */
+  .theme-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
   }
 }

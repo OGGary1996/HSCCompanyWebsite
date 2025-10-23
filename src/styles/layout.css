@@ -15,7 +15,7 @@
   transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* 平滑过渡效果 */
 
   display: flex;
-  justify-content: center;
+  justify-content: center;  /* 改回 center，保持原来的居中效果 */
   gap:12px;
   align-items: center;
   padding: 20px 40px;

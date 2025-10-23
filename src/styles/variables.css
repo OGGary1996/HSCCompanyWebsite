@@ -4,19 +4,23 @@
 */
 
 :root {
-  /* Colors */
+  /* Colors - 深色模式（默认） */
   /* 1. Background color - black*/
   --color-background: #000000;
   /* 2. Font color - white */
   --color-text: #ffffff;
-  /* 3. Accent color */
-  --color-accent: #6a40d8;
 
   /* Fonts */
   --font-main: "Inter", "Helvetica Neue", Arial, sans-serif;
 
   /* Layout */
   --max-width: 1200px;
+}
 
-
+/* 浅色模式 */
+[data-theme="light"] {
+  /* 1. Background color - white */
+  --color-background: #ffffff;
+  /* 2. Font color - black */
+  --color-text: #000000;
 }
