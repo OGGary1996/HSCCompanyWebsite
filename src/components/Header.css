@@ -21,13 +21,13 @@
 .company-name h1{
   font-size: 2rem;
   margin: 0;
-  color: var(--color-text);
+  color: white;
   letter-spacing: 1px;
 }
 .company-name p {
   font-size: 1rem;
   margin: 0;
-  color: var(--color-text);
+  color: white;
   letter-spacing: 0.2px;
 }
 
@@ -38,34 +38,9 @@
 }
 /*header-nav-a 当前激活页面保持高亮*/
 .header-nav a.active {
-  color: var(--color-text);
-  text-shadow: 0 0 8px var(--color-text), 0 0 16px var(--color-text);
+  color: white;
+  text-shadow: 0 0 8px white, 0 0 16px white;
   transform: scale(1.1);
-}
-
-.theme-toggle {
-  position: absolute;
-  right: 150px;
-  background: transparent;  /* 透明背景 */
-  border: none;             /* 无边框 */
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  outline: none;  /* 去除点击时的默认边框 */
-}
-.theme-icon {
-  width: 50%;
-  height: 50%;
-  object-fit: contain;
-  filter: invert(1);  /* 反转颜色：黑色变白色 */
-  transition: opacity 0.3s ease;  /* 图片切换时的淡入淡出效果 */
-}
-.theme-toggle:active .theme-icon {
-  transform: rotate(180deg);  /* 点击时旋转 */
 }
 
 /* 移动端Header响应式 */
@@ -99,19 +74,16 @@
     text-align: left;
     margin: 0;
   }
-  
   .company-name h1 {
     font-size: 1.3rem;
     letter-spacing: 0.5px;
     margin: 0;
   }
-  
   .company-name p {
     font-size: 0.75rem;
     letter-spacing: 0.1px;
     margin: 0;
   }
-  
   /* 第二行：横向分割线（白色） */
   .header-left::after {
     content: '';
@@ -122,7 +94,6 @@
     height: 1px;
     background: var(--color-text);
   }
-  
   /* 第三行：导航链接，强制单行，居中显示 */
   .header-nav {
     gap: 8px;
@@ -141,23 +112,14 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
-  
   .header-nav::-webkit-scrollbar {
     display: none;
   }
-  
   .header-nav a {
     font-size: 0.8rem;
     padding: 4px 8px;
     white-space: nowrap;
     flex-shrink: 0;
   }
-  /* 移动端主题切换按钮 */
-  .theme-toggle {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 40px;
-    height: 40px;
-  }
+
 }

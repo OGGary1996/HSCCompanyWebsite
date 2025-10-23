@@ -4,23 +4,16 @@
 */
 
 :root {
-  /* Colors - 深色模式（默认） */
-  /* 1. Background color - black*/
-  --color-background: #000000;
-  /* 2. Font color - white */
-  --color-text: #ffffff;
+  /* Colors - 深色模式（默认） - 柔和配色 */
+
+  /* 1. Background color - 深灰色（不是纯黑）*/
+  --color-background: #1b1b1b;
+  /* 2. Font color - 浅灰色（不是纯白） */
+  --color-text: #e5e5e5;
 
   /* Fonts */
   --font-main: "Inter", "Helvetica Neue", Arial, sans-serif;
 
   /* Layout */
   --max-width: 1200px;
-}
-
-/* 浅色模式 */
-[data-theme="light"] {
-  /* 1. Background color - white */
-  --color-background: #ffffff;
-  /* 2. Font color - black */
-  --color-text: #000000;
 }

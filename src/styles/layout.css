@@ -10,7 +10,7 @@
   left: 0;
   width: 100%;
   z-index: 1000; /* 确保在最上层 */
-  background-color: rgba(0,0,0,0.6); /* 半透明背景 */
+  background-color: rgba(27,27,27,0.6); /* 半透明背景 */
   backdrop-filter: blur(6px); /* 背景模糊效果 */
   transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* 平滑过渡效果 */
 
@@ -27,7 +27,7 @@ main {
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  padding: 55px 0 40px 0; /* 顶部留出空间给固定的 header */
+  padding: 50px 0 40px 0; /* 顶部留出空间给固定的 header */
   background-color: var(--color-background);
   width: 100%;
   max-width: 100vw;
@@ -37,7 +37,7 @@ main {
 
 /* Footer 整体布局 - flex */
 .footer {
-  background-color: var(--color-background);
+  background-color: rgba(10,10,10,0.6);
   color: var(--color-text);
   padding: 40px 40px 20px 40px;
   display: flex;

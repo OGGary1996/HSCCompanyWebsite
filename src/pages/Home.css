@@ -1,9 +1,11 @@
-
+.home {
+  margin-top: -110px; /* 补偿header的高度 */
+}
 /* 1.hero部分 */
 .home-hero {
   position: relative;
-  height: 85vh;
-  background-size: 120% auto; /* 放大背景图以覆盖更多区域 */
+  height: 95vh;
+  background-size: 130% auto; /* 放大背景图以覆盖更多区域 */
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
@@ -15,7 +17,7 @@
   will-change: background-size;
 }
 .home-hero:hover {
-  background-size: 130% auto; /* 鼠标悬停时放大背景图 */
+  background-size: 140% auto; /* 鼠标悬停时放大背景图 */
   transition: background-size 0.5s ease; /* 平滑过渡效果 */
 }
 /* 半透明遮罩层 */
@@ -29,6 +31,7 @@
   position: relative;
   z-index: 2;
   max-width: 700px;
+  padding-top: 50px;
 }
 /* 标题部分 */
 .hero__title {
@@ -177,14 +180,12 @@
 @media (max-width: 768px) {
   /* 整体Home页面容器 */
   .home {
-    width: 100%;
-    max-width: 100vw;
-    overflow-x: hidden;
+    margin-top: -130px; /* 补偿header的高度 */
   }
   
   /* Hero部分移动端优化 */
   .home-hero {
-    height: 35vh;
+    height: 55vh;
     min-height: 30vh;
     padding: 10px 20px 0 20px;
     margin-top: 30px;
@@ -210,7 +211,7 @@
   .hero__content {
     max-width: 100%;
     text-align: left;
-    margin-top: 20px;
+    padding-top: 70px;
   }
   
   .hero__title {

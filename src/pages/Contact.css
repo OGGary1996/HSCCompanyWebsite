@@ -1,10 +1,13 @@
+.contact {
+  margin-top: -110px;
+}
 
 /* Hero Section */
 .contact-hero {
   text-align: center;
   position: relative;
-  height: 85vh;
-  background-size: 120% auto; /* 放大背景图以覆盖更多区域 */
+  height: 95vh;
+  background-size: 130% auto; /* 放大背景图以覆盖更多区域 */
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
@@ -16,7 +19,7 @@
   will-change: background-size;
 }
 .contact-hero:hover {
-  background-size: 130% auto; /* 鼠标悬停时放大背景图 */
+  background-size: 140% auto; /* 鼠标悬停时放大背景图 */
   transition: background-size 0.5s ease; /* 平滑过渡效果 */
 }
 .hero-overlay {
@@ -28,6 +31,7 @@
   position: relative;
   z-index: 2;
   max-width: 1200px;
+  padding-top: 50px;
 }
 .hero-content h1 {
   font-size: clamp(28px, 6vw, 60px);
@@ -111,9 +115,13 @@
 
 /* 移动端Contact页面响应式 */
 @media (max-width: 768px) {
+  .contact {
+    margin-top: -130px;
+  }
+
   /* Hero部分 - 参考AboutUs优化 */
   .contact-hero {
-    height: 35vh;
+    height: 55vh;
     min-height: 30vh;
     padding: 10px 20px;
     margin-top: 30px;
@@ -142,6 +150,7 @@
     max-width: 100%;
     text-align: center;
     margin: 0;
+    padding-top: 70px;
   }
   
   .hero-content h1 {

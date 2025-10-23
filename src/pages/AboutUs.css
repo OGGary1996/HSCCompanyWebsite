@@ -1,8 +1,12 @@
+.about {
+  margin-top: -110px;
+}
+
 /* 1. Hero */
 .hero-section {
   position: relative;
-  height: 85vh;
-  background-size: 120% auto;
+  height: 95vh;
+  background-size: 130% auto;
   background-position: center bottom;
   background-repeat: no-repeat;
   display: flex;
@@ -14,7 +18,7 @@
   will-change: background-size;
 }
 .hero-section:hover {
-  background-size: 130% auto; /* 鼠标悬停时放大背景图 */
+  background-size: 140% auto; /* 鼠标悬停时放大背景图 */
   transition: background-size 0.5s ease; /* 平滑过渡效果 */
 }
 .hero-overlay {
@@ -26,7 +30,7 @@
   position: relative;
   z-index: 2;
   max-width: 800px;
-  animation: fadeInUp 1.5s ease-out forwards;
+  padding-top: 50px;
 }
 .hero-content h1 {
   font-size: clamp(28px, 6vw, 60px);
@@ -344,9 +348,12 @@
 
 /* 移动端AboutUs页面响应式 */
 @media (max-width: 768px) {
+  .about {
+    margin-top: -130px; /* 补偿header的高度 */
+  }
   /* Hero部分优化 - 参考Home页面 */
   .hero-section {
-    height: 35vh;
+    height: 55vh;
     min-height: 30vh;
     padding: 10px 20px;
     margin-top: 30px;
@@ -370,7 +377,7 @@
   .hero-content {
     max-width: 100%;
     text-align: center;
-    margin: 0;
+    padding-top: 70px;
   }
   
   .hero-content h1 {
