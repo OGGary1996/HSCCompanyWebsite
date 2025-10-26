@@ -20,11 +20,22 @@ const ProjectsDetail = () => {
 
   return (
     <div className="projects-detail">
+      <img src={article.cover} alt={article.title} className="cover" />
       <h1 className="title">{article.title}</h1>
       <div className="content">
-        <ReactMarkdown>{article.content}</ReactMarkdown>
+        <ReactMarkdown
+          components={{
+            img: ({src, alt}) => {
+              // 如果文章有images映射且包含该路径，使用映射的图片
+              if (article.images && article.images[src]) {
+                return <img src={article.images[src]} alt={alt} className="md-img"/>;
+              }
+              // 否则使用原始src
+              return <img src={src} alt={alt} />;
+            }
+          }}
+        >{article.content}</ReactMarkdown>
       </div>
-      <img src={article.image} alt={article.title} className="cover" />
       <Link to="/projects" className="back-link">← Back to Projects</Link>
     </div>
   )

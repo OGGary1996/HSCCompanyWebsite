@@ -8,7 +8,7 @@ const ProjectsCard = ({article}) => {
 
   return (
     <Link to={`/projects/${article.id}`} className="projects-card">
-      <img src={article.image} alt={article.title} className="projects-image" />
+      <img src={article.cover} alt={article.title} className="projects-image" />
       <div className="projects-content">
         <h2>{article.title}</h2>
         <p className="projects-excerpt">

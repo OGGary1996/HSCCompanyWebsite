@@ -386,7 +386,7 @@ export const energyShare2023 = {
 
 ```javascript
 import article_1 from '../assets/blog/article1.md?raw';
-import image_1 from '../assets/blog/img1.png';
+import image_1 from '../assets/blog/cover.png';
 
 export const blogArticles = [
   {
@@ -1282,7 +1282,7 @@ export const energyShare2023 = {
 
 ```javascript
 import article_1 from '../assets/blog/article1.md?raw';
-import image_1 from '../assets/blog/img1.png';
+import image_1 from '../assets/blog/cover.png';
 
 export const blogArticles = [
   {

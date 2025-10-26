@@ -15,45 +15,69 @@ function Home(){
         <div className="hero__content">
           <h1 className="hero__title">The Oil &amp; Gas Experts</h1>
           <p className="hero__subtitle">
-            Empowering Energy Leaders to Deliver Smarter, Safer Solutions
-          </p>
-          <div className="hero__description">
-            <p>The energy landscape is shifting fast. With nearly three decades of global experience.</p>
-            <p>We provide more than consulting.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* 2. 简介部分 */}
-      <section className="home-intro">
-        <div className="intro__header">
-          <h1 className="intro__title">HSC - <br/>Changing the Game</h1>
-          <p className="intro__subtitle">Expertise backed by Experience</p>
-        </div>
-        <div className="intro__left">
-          <p className="intro__body">
-            Our consultancy provides outstanding oil and gas engineering services.
-            We leverage 30 years of experience to optimize oil recovery with
-            specialized techniques and showcase various projects that illustrate
-            our successful track record.
+            Powered by three decades of global insight — redefining consulting
           </p>
           <NavLink to="/projects" className="btn">Learn More</NavLink>
         </div>
-        <div className="intro__right">
-          <p className="intro__body">
-            From conducting webinars to sharing insightful blog articles, we aim to
-            educate and empower our clients. Our commitment to excellence in service
-            delivery ensures that each client receives the utmost attention and
-            dedication.
+      </section>
+
+      {/* 2. Why Partner with HSC */}
+      <section className="why-partner-section">
+        <div className="why-left">
+          <h2>WHY PARTNER WITH US</h2>
+          <p>
+            HSC was born from a vision: to bring nearly 30 years of petroleum
+            engineering leadership to operators seeking agile, value-driven
+            solutions.
           </p>
-          <a
-            href="https://www.iea.org/data-and-statistics/data-tools/energy-statistics-data-browser?country=WORLD&fuel=Energy%20supply&indicator=TESbySource"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn"
-          >
-            World Energy Data
-          </a>
+          <p>
+            Shaped by senior roles at industry giants including Petronas,
+            Occidental Petroleum, Maersk Oil, Schlumberger, and BP, our team’s
+            global experience has delivered tangible results—multi-million-dollar
+            savings, improved recovery rates, and safer, more reliable operations.
+          </p>
+          <p>
+            Today, that legacy of proven impact is the backbone of HSC. We channel
+            decades of expertise into innovative consulting that helps clients
+            solve their toughest challenges. Whether it’s optimizing production,
+            safeguarding assets, or advancing sustainability, we’re not just
+            consultants—we’re your trusted partner in navigating the demands of
+            both the field and the future.
+          </p>
+          <blockquote>
+            With HSC, you gain more than a consultant — you gain a trusted partner.
+          </blockquote>
+        </div>
+        <div className="why-divider"></div>
+        <div className="why-right">
+          <div className="wp-card wp-red">
+            <div className="wp-num">01</div>
+            <h3>AGILE PARTNERSHIP</h3>
+            <p>
+              No two projects are the same, and neither are our solutions. We work
+              closely with your team to understand your goals and deliver
+              strategies that align with your vision, values, and operational
+              priorities.
+            </p>
+          </div>
+          <div className="wp-card wp-blue">
+            <div className="wp-num">02</div>
+            <h3>STRATEGIC INSIGHT</h3>
+            <p>
+              We turn decades of technical leadership into clear, actionable
+              guidance that helps you make smarter, faster decisions in complex
+              environments.
+            </p>
+          </div>
+          <div className="wp-card wp-gold">
+            <div className="wp-num">03</div>
+            <h3>SUSTAINABLE IMPACT</h3>
+            <p>
+              Our solutions don’t stop at immediate results. We embed practices
+              that safeguard assets, optimize production, and advance
+              sustainability for the long term.
+            </p>
+          </div>
         </div>
       </section>
 
