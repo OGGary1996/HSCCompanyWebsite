@@ -60,7 +60,7 @@ export const projectsArticles = [
   },
   {
     id: 2,
-    title: "CCS Folw Assurance",
+    title: "CCS Flow Assurance",
     cover: CCSCover,
     content: CCS,
     images: {
