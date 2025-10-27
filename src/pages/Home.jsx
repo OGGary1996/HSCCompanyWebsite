@@ -17,7 +17,7 @@ function Home(){
           <p className="hero__subtitle">
             Powered by three decades of global insight — Redefining Consulting
           </p>
-          <NavLink to="/projects" className="btn">Learn &nbsp;More</NavLink>
+          <NavLink to="/projects" className="btn">Learn More</NavLink>
         </div>
       </section>
 
