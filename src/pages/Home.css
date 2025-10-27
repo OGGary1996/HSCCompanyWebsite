@@ -52,9 +52,9 @@
 .btn {
   display: inline-block;
   margin-top: 40px;
-  margin-left: 120px;
+  margin-left: 125px;
   padding: 10px 10px;
-  width: 280px;
+  width: 250px;
   border-radius: 999px;
   font-weight: 500;
   transition: all 0.3s ease;
