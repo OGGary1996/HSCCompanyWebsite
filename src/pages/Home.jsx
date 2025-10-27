@@ -15,7 +15,7 @@ function Home(){
         <div className="hero__content">
           <h1 className="hero__title">The Oil &amp; Gas Experts</h1>
           <p className="hero__subtitle">
-            Powered by three decades of global insight — redefining consulting
+            Powered by three decades of global insight — Redefining Consulting
           </p>
           <NavLink to="/projects" className="btn">Learn More</NavLink>
         </div>
